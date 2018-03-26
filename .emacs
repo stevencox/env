@@ -1,11 +1,16 @@
-(add-to-list 'load-path "/Users/stevencox/.emacs.d/color-theme-6.6.0")
-(add-to-list 'load-path "~/emacs")
+(add-to-list 'load-path "/Users/scox/.emacs.d/color-theme-6.6.0")
+(add-to-list 'load-path "/Users/scox/.emacs.d/yaml-mode")
+    (add-to-list 'load-path "~/emacs")
 
+(setq global-linum-mode t)
 
 (add-to-list 'default-frame-alist
                        '(font . "Monaco-12"))
 
     
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;;(require 'yaml-mode)
 ;;(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))

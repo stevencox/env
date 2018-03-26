@@ -9,7 +9,6 @@ export PATH=/usr/local/bin:$PATH
 
 # Configure prompt
 PS1="[\u@mac\w]$ "
-PS1="[\u@\H:\w]$ "
 
 # Alias renci ssh
 renci () {
@@ -26,12 +25,9 @@ hideFiles () {
 git config --global user.name "Steven Cox"
 git config --global user.email scox@renci.org
 
-backup () {
-    tar cvzf backup.tar.gz \
-        ~/.bashrc  \
-        ~/.pypirc  \
-        ~/.emacs   \
-        ~/.emacs.d \
-        Library/Preferences/com.apple.Terminal.plist
-}
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:$HOME/bin:$HOME/dev/smartBag/bin
